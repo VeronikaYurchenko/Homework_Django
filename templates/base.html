@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="{% url 'index' %}">Главная страница</a></li>
+            <li><a href="{% url 'about' %}">Обо мне</a></li>
+            <li><a href="{% url 'reading_products' %}">Список товаров</a></li>
+        </ul>
+    </div>
+    {% block content %}
+        <p>Скоро тут появится текст...</p>
+    {% endblock %}
+</body>
+</html>

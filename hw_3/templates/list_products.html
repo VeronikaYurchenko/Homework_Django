@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}7 дней{% endblock %}
+
+{% block content %}
+    <h1> Список заказанных клиентом товаров из всех его заказов с сортировкой по времени за последние {{ days }} дней</h1>
+    <h3>Клиент: {{ user.name }}</h3>
+    <ul>
+        {% for product in products %}
+            <li>Товар: {{ product.name }}, цена: {{ product.price }},
+                количество: {{ product.quantity }}, дата заказа: {{ product.date }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
