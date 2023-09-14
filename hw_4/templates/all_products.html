@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Все товары{% endblock %}
+
+{% block content %}
+    <h1> Список всех товаров.</h1>
+    <ul>
+        {% for product in products %}
+            <li>Товар: {{ product.name }},
+                описание: {{ product.description }},
+                цена: {{ product.price }},
+                количество: {{ product.quantity }},
+                дата добавления: {{ product.date_added }}
+                <a href="{% url 'update_product' product.pk %}">Редактировать товар</a>
+                <a href="{% url 'show_image' product.pk %}">Показать товар</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
