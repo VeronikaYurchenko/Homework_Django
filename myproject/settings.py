@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'hw_2',
     'hw_3',
     'hw_4',
+    'hw_5',
 ]
 
 MIDDLEWARE = [
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -125,3 +126,83 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'simple': {
+#             'format': '%(levelname)s %(message)s'
+#         },
+#         'verbose': {
+#             'format': '{levelname} Creation time: "{asctime}" Module: "{module}" Name of function: "{funcName}" Message: "{message}"',
+#             'style': '{',
+#         },
+#     },
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'verbose',
+#         },
+#         'file_django': {
+#             'class': 'logging.FileHandler',
+#             'filename': './log/django.log',
+#             'formatter': 'verbose',
+#         },
+#         'file_hw_1': {
+#             'class': 'logging.FileHandler',
+#             'filename': './log/hw_1.log',
+#             'formatter': 'verbose',
+#         },
+#         'file_hw_2': {
+#             'class': 'logging.FileHandler',
+#             'filename': './log/hw_2.log',
+#             'formatter': 'verbose',
+#         },
+#         'file_hw_3': {
+#             'class': 'logging.FileHandler',
+#             'filename': './log/hw_3.log',
+#             'formatter': 'verbose',
+#         },
+#         'file_hw_4': {
+#             'class': 'logging.FileHandler',
+#             'filename': './log/hw_4.log',
+#             'formatter': 'verbose',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console', 'file_django'],
+#             # 'handlers': ['file_django'],
+#             'level': 'INFO',
+#         },
+#         'hw_1': {
+#             # 'handlers': ['console'],
+#             'handlers': ['console', 'file_hw_1'],
+#             # 'handlers': ['file_hw_1'],
+#             'level': 'INFO',
+#             # 'propagate': True,
+#         },
+#         'hw_2': {
+#             # 'handlers': ['console'],
+#             'handlers': ['console', 'file_hw_2'],
+#             # 'handlers': ['file_hw_2'],
+#             'level': 'INFO',
+#             # 'propagate': True,
+#         },
+#         'hw_3': {
+#             # 'handlers': ['console'],
+#             'handlers': ['console', 'file_hw_3'],
+#             # 'handlers': ['file_hw_3'],
+#             'level': 'INFO',
+#             # 'propagate': True,
+#         },
+#         'hw_4': {
+#             # 'handlers': ['console'],
+#             'handlers': ['console', 'file_hw_4'],
+#             # 'handlers': ['file_hw_4'],
+#             'level': 'INFO',
+#             # 'propagate': True,
+#         },
+#     },
+# }

@@ -9,10 +9,10 @@ from django.http import HttpResponse
 
 class ReadingOrdersWithListProducts(View):
     def get(self, request, user_id, days):
-        user = Client.objects.get(pk=user_id)
+        client = Client.objects.get(pk=client_id)
         start_date = datetime.date.today() - timedelta(days=days)
-        queryset = Order.objects.select_related('product_id').filter(user_id=
-                                                                     user_id).filter(
+        queryset = Order.objects.select_related('product_id').filter(client_id=
+                                                                     client_id).filter(
             making_order__gte=start_date).order_by('making_order')
         products = []
         for order in queryset:
