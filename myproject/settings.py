@@ -29,7 +29,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
-   'VeronikaYuechenko.pythonanywhere.com',
+   'Yurchenko.pythonanywhere.com',
 ]
 
 INTERNAL_IPS = [
@@ -93,10 +93,10 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'VeronikaYuechenk$default',
-        'USER': 'VeronikaYuechenk',
+        'NAME': 'Yurchenko$default',
+        'USER': 'Yurchenko',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': 'VeronikaYuechenko.mysql.pythonanywhere-services.com',
+        'HOST': 'Yurchenko.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
@@ -147,82 +147,82 @@ TEMPLATES_DIRS = (os.path.join(os.path.abspath(os.path.dirname(__file__)), 'temp
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'formatters': {
-#         'simple': {
-#             'format': '%(levelname)s %(message)s'
-#         },
-#         'verbose': {
-#             'format': '{levelname} Creation time: "{asctime}" Module: "{module}" Name of function: "{funcName}" Message: "{message}"',
-#             'style': '{',
-#         },
-#     },
-#     'handlers': {
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#             'formatter': 'verbose',
-#         },
-#         'file': {
-#             'class': 'logging.FileHandler',
-#             'filename': './log/django.log',
-#             'formatter': 'verbose',
-#         },
-#         'hw_1': {
-#             'class': 'logging.FileHandler',
-#             'filename': './log/hw_1.log',
-#             'formatter': 'verbose',
-#         },
-#         'hw_2': {
-#             'class': 'logging.FileHandler',
-#             'filename': './log/hw_2.log',
-#             'formatter': 'verbose',
-#         },
-#         'hw_3': {
-#             'class': 'logging.FileHandler',
-#             'filename': './log/hw_3.log',
-#             'formatter': 'verbose',
-#         },
-#         'hw_4': {
-#             'class': 'logging.FileHandler',
-#             'filename': './log/hw_4.log',
-#             'formatter': 'verbose',
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['console', 'file_django'],
-#             # 'handlers': ['file_django'],
-#             'level': 'INFO',
-#         },
-#         'hw_1': {
-#             # 'handlers': ['console'],
-#             'handlers': ['console', 'file_hw_1'],
-#             # 'handlers': ['file_hw_1'],
-#             'level': 'INFO',
-#             # 'propagate': True,
-#         },
-#         'hw_2': {
-#             # 'handlers': ['console'],
-#             'handlers': ['console', 'file_hw_2'],
-#             # 'handlers': ['file_hw_2'],
-#             'level': 'INFO',
-#             # 'propagate': True,
-#         },
-#         'hw_3': {
-#             # 'handlers': ['console'],
-#             'handlers': ['console', 'file_hw_3'],
-#             # 'handlers': ['file_hw_3'],
-#             'level': 'INFO',
-#             # 'propagate': True,
-#         },
-#         'hw_4': {
-#             # 'handlers': ['console'],
-#             'handlers': ['console', 'file_hw_4'],
-#             # 'handlers': ['file_hw_4'],
-#             'level': 'INFO',
-#             # 'propagate': True,
-#         },
-#     },
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+        'verbose': {
+            'format': '{levelname} Creation time: "{asctime}" Module: "{module}" Name of function: "{funcName}" Message: "{message}"',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': './log/django.log',
+            'formatter': 'verbose',
+        },
+        'hw_1': {
+            'class': 'logging.FileHandler',
+            'filename': './log/hw_1.log',
+            'formatter': 'verbose',
+        },
+        'hw_2': {
+            'class': 'logging.FileHandler',
+            'filename': './log/hw_2.log',
+            'formatter': 'verbose',
+        },
+        'hw_3': {
+            'class': 'logging.FileHandler',
+            'filename': './log/hw_3.log',
+            'formatter': 'verbose',
+        },
+        'hw_4': {
+            'class': 'logging.FileHandler',
+            'filename': './log/hw_4.log',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file_django'],
+            # 'handlers': ['file_django'],
+            'level': 'INFO',
+        },
+        # 'hw_1': {
+        #     # 'handlers': ['console'],
+        #     'handlers': ['console', 'file_hw_1'],
+        #     # 'handlers': ['file_hw_1'],
+        #     'level': 'INFO',
+        #     # 'propagate': True,
+        # },
+        # 'hw_2': {
+        #     # 'handlers': ['console'],
+        #     'handlers': ['console', 'file_hw_2'],
+        #     # 'handlers': ['file_hw_2'],
+        #     'level': 'INFO',
+        #     # 'propagate': True,
+        # },
+        # 'hw_3': {
+        #     # 'handlers': ['console'],
+        #     'handlers': ['console', 'file_hw_3'],
+        #     # 'handlers': ['file_hw_3'],
+        #     'level': 'INFO',
+        #     # 'propagate': True,
+        # },
+        # 'hw_4': {
+        #     # 'handlers': ['console'],
+        #     'handlers': ['console', 'file_hw_4'],
+        #     # 'handlers': ['file_hw_4'],
+        #     'level': 'INFO',
+        #     # 'propagate': True,
+    },
+}
+
