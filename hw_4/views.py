@@ -12,18 +12,18 @@ logger = logging.getLogger(__name__)
 
 def index(request):
     logger.info("The main page has been loaded.")
-    return render(request, 'hw_4/index.html')
+    return render(request, 'index.html')
 
 
 def about(request):
     logger.info("The page about yourself has been loaded.")
-    return render(request, 'hw_4/about.html')
+    return render(request, 'about.html')
 
 
 class ReadingProducts(View):
     def get(self, request):
         products = Product.objects.all()
-        return render(request, 'hw_4/all_products.html', {'products': products})
+        return render(request, 'all_products.html', {'products': products})
 
 
 def update_product(request, product_id):
@@ -44,13 +44,13 @@ def update_product(request, product_id):
                 product.quantity = new_quantity
                 product.save()
                 logger.info(f'Product data changed: {new_name=}, {new_description=}, {new_price=}, {new_quantity=}')
-                return render(request, 'hw_4/update_product_completed.html')
+                return render(request, 'update_product_completed.html')
         logger.info(f'The product data has not changed')
-        return render(request, 'hw_4/update_product_not_changed.html')
+        return render(request, 'update_product_not_changed.html')
     else:
         # открываем начальную форму с исходными данными товара
         form = UpdateProduct(initial=product_data)
-    return render(request, 'hw_4/update_product.html', {'form': form})
+    return render(request, 'update_product.html', {'form': form})
 
 
 def show_image(request, product_id):
@@ -66,4 +66,4 @@ def show_image(request, product_id):
             logger.info(f'The product image has changed')
     else:
         form = UpdateImage()
-    return render(request, 'hw_4/show_image.html', {'product': product, 'form': form})
+    return render(request, 'show_image.html', {'product': product, 'form': form})

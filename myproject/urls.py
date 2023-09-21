@@ -22,5 +22,6 @@ urlpatterns = [
     #path('hw_2/', include('hw_2.urls')),
     path('hw_3/', include('hw_3.urls')),
     path('', include('hw_4.urls')),
+    #path('__debug__/', include("debug_toolbar.urls")),
 ]
 

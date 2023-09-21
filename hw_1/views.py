@@ -7,8 +7,10 @@ logger = logging.getLogger(__name__)
 
 def index(request):
     html = """
+    <html>
     <h1>Главная страница.</h1>
     <p>Это главная страница домашнего задания к 1-му семинару.</p>
+    <html>
     """
     logger.info("The main page has been loaded.")
     return HttpResponse(html)

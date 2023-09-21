@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import Client, Product, Order
+from .models import User, Product, Order
 from django.utils.safestring import mark_safe
 
 
-@admin.register(Client)
-class ClientAdmin(admin.ModelAdmin):
-    list_display = ['name', 'address', 'telephone', 'date_registration']
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ['name', 'address', 'telephone', 'date_reg']
     ordering = ['name']
-    list_filter = ['telephone', 'address', 'date_registration']
+    list_filter = ['telephone', 'address', 'date_reg']
     search_fields = ['name']
     search_help_text = 'Поиск по имени'  # (name)
 
@@ -61,21 +61,21 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['get_pk', 'making_order', 'get_client', 'get_product', 'sum']
+    list_display = ['get_pk', 'making_order', 'get_user', 'get_product', 'sum']
     ordering = ['pk']
-    list_filter = ['making_order', 'client_id__name', 'product_id__name']
+    list_filter = ['making_order', 'user_id__name', 'product_id__name']
     search_fields = ['pk']
     search_help_text = 'Поиск по ID ордера'
 
     def get_pk(self, obj):
         return obj.pk
 
-    def get_client(self, obj):
+    def get_user(self, obj):
         return obj.user_id.name
 
     def get_product(self, obj):
         return obj.product_id.name
 
-# admin.site.register(Client, ClientAdmin)
+# admin.site.register(User, UserAdmin)
 # admin.site.register(Product)
 # admin.site.register(Order)
